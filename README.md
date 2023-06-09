@@ -7,9 +7,10 @@ RootJuice2 is the successor of RootJuice.
 In a nutshell, RootJuice2 is a Python application that takes as input a list of URLs and on the basis of some configurable parameters retrieves the textual content of that URLs and saves it in an Apache Solr collection.
 
 More in details it takes as input 2 files :
-
-* seed.tsv ==> list of URLs to be scraped
-* config.cfg ==> list of technical parameters that you can modify on your needs
+<ul>
+<li> seed.tsv ==> list of URLs to be scraped</li>
+<li> config.cfg ==> list of technical parameters that you can modify on your needs</li>
+</ul>	
 
 I developed and used this program for 2 different use cases:
 1) scrape only the homepages of the URLs listed in the input file seed.tsv
@@ -50,12 +51,16 @@ If you have Python 3.X and Java already installed on your PC you just have to ap
 4) open a terminal and go into the rootjuice2 directory
 
 5) I suggest to create and configure a virtual environment by entering the following commands (by the way I use conda to do this):
-        * conda create --name rootjuice2 python=3.9
-        * conda activate rootjuice2
-        * pip install -r requirements.txt
+        <ul>
+	<li> conda create --name rootjuice2 python=3.9</li>
+        <li> conda activate rootjuice2</li>
+        <li> pip install -r requirements.txt</li>
+	</ul>
 
 6) in the same terminal go into the solr-8.11.1/bin sub-directory and enter the following command to start Solr:
-        * solr start
+        <ul>
+	<li> solr start</li>
+	</ul>
 
 7) wait a few seconds, then open the following URL in your browser in order to check that Solr is up and running:
         </br> http://localhost:8983/solr/#/
@@ -69,22 +74,24 @@ If you have Python 3.X and Java already installed on your PC you just have to ap
 	scrapy crawl rjSpider -a seedFilePath=C:/rootjuice2/seed.tsv -a confFilePath=C:/rootjuice2/conf/config.cfg -s JOBDIR=C:/rootjuice2/conf/JOBDIR/rj2Spider_jobdir/
 
 10) at the end of execution you should find:
-
-        * a log file called rootjuice2_[dateTime].log inside the "logs" directory
-	* the scraped webpages stored in the Solr collection named "test"
+	<ul>
+	<li>a log file called rootjuice2_[dateTime].log inside the "logs" directory</li>
+	<li>the scraped webpages stored in the Solr collection named "test"</li>
+	</ul>
 
 11) in order to verify that the textual content of the webpages has been correctly stored into Solr:
-
-        * open the url http://localhost:8983/solr/#/
-        * in the left bar chose the test collection from the combo box
-        * in the left bar click the "Query" link
-        * in the main panel click the "Execute Query" button
-        * you shoul see the content of the downloaded webpages
+	<ul>
+        <li> open the url http://localhost:8983/solr/#/</li>
+        <li> in the left bar chose the test collection from the combo box</li>
+        <li> in the left bar click the "Query" link</li>
+        <li> in the main panel click the "Execute Query" button</li>
+        <li> you shoul see the content of the downloaded webpages</li>
+	</ul>
 
 12) to stop Solr, in the same terminal you used so far, go into the solr-8.11.1/bin sub-directory and enter the following command:
-
-        * solr stop -all
-        
+	<ul>
+        <li> solr stop -all</li>
+        <ul>
 
 ## Licensing
 
