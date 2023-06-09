@@ -1,0 +1,7 @@
+beautifulsoup4==4.11.1
+itemadapter==0.7.0
+psycopg2_binary==2.9.5
+PyDispatcher==2.0.5
+pysolr==3.9.0
+Scrapy==2.7.0
+tika_app==1.5.0
